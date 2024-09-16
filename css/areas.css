@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url('../fonts/RobotoMono-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'RobotoMono-Regular';
+}
+
+@keyframes breath {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  
+}
+
+.breath:hover {
+    animation-name: breath;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.6vw;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(76,71,112);
+    background: radial-gradient(circle, rgba(76,71,112,1) 0%, rgba(66,64,75,1) 52%, rgba(44,40,59,1) 83%);
+    border-radius: 10px;
+    color: #fff;
+    width: 80%;
+    height: 5vh;
+    margin: auto;
+    margin-top: 1vh;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35vw;
+    height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#logo {
+    width: 3vw;
+    height: 3vh;
+    margin-left: 1vw;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* AREAS */
+#section-areas{
+    width: 80%;
+    display: flex;
+}
+#section-areas .contenedor-img{
+    display: block;
+    margin-left: 15px;
+    margin-top:20px
+}
+
+#section-areas .contenedor-img img{
+    width: 49%;
+    height: 300px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border:groove 5px darkgoldenrod;
+    border-radius: 10px;
+}
+#section-areas .contenedor-img img:hover{
+    opacity: 0.5;
+}
+
+/* Entregas: */
+#entregas{
+    width: 80%;
+    color:white;
+    margin-top: 20px;
+}
+.h1-entregas{
+    /* text-stroke es una propiedad CSS que puedes utilizar para añadir un contorno a tus textos. Te permite especificar los contornos width y color. Esta propiedad sólo es compatible con los navegadores basados en WebKit, y para que puedas utilizarla, debes añadir el prefijo -webkit-. */
+    -webkit-text-stroke-color:black ;
+    -webkit-text-stroke-width: 1px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color:whitesmoke;
+}
+#entregas p{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#entregas h2{
+    margin-top:20px;
+    text-decoration: underline;
+ }
+ .img-entregas{
+    padding: 0.3em;
+ }
+ .img-entregas img{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+ }
+ .img-entregas img:hover{
+    transform:scale(2);
+ }
+ #entregas iframe{
+    margin-left: 150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+ }
+/* Entrega de wow */
+.entregas-wow{
+    background-image: url(img/fondo-wow.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+/* Entregas de diablo */
+.entregas-diablo{
+    background-image: url(img/logo-diablo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Entregas de overwatch */
+.entregas-overwatch{
+    background-image: url(img/logo-diablo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Entregas de starcraft */
+.entregas-starcraft{
+    background-image: url(img/logo-starCraft.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Entregas de callOfDuty */
+.entregas-callOfDuty{
+    background-image: url(img/logo-callOfDuty.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Entregas de heroes of storm */
+.entregas-heroes{
+    background-image: url(img/logo-heroes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+
+/* RESPONSIVE */
+@media screen and(min-width:1300px){
+    
+    
+}
+
+@media screen and(max-width:1024px){
+
+    #logo {
+        width: 5vw;
+    }
+    body {
+        font-size: 1.6vw;   
+    }
+    nav ul {
+        width: 50vw;
+        font-size: 1.4vw;
+    }
+   
+}
+
+@media screen and(max-width:768px){
+
+    #logo {
+        width: 7vw;
+    }
+
+    body {
+        font-size: 2.4vw;   
+    }
+    nav ul {
+        width: 50vw;
+        font-size: 1.7vw;
+    }
+}
+
+@media screen and(max-width:568px){
+
+    body {
+        font-size: 2.4vw;   
+    }
+    nav ul {
+        width: 80vw;
+        font-size: 2.1vw;
+    }
+
+}
+
+@media screen and(max-width:320px){
+
+    #logo {
+        width: 10vw;
+    }
+    body {
+        font-size: 4vw;
+    }
+    nav ul {
+        width: 80vw;
+        font-size: 2.3vw;
+    }
+
+}

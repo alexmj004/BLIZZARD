@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url('../fonts/RobotoMono-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'RobotoMono-Regular';
+}
+
+@keyframes breath {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  
+}
+
+.breath:hover {
+    animation-name: breath;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.6vw;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(76,71,112);
+    background: radial-gradient(circle, rgba(76,71,112,1) 0%, rgba(66,64,75,1) 52%, rgba(44,40,59,1) 83%);
+    border-radius: 10px;
+    color: #fff;
+    width: 80%;
+    height: 5vh;
+    margin: auto;
+    margin-top: 1vh;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35vw;
+    height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#logo {
+    width: 3vw;
+    height: 3vh;
+    margin-left: 1vw;
+    max-width: 100%;
+    height: auto;
+}
+
+#sylvanas {
+  position: absolute;
+  left: 10vw;
+  top: 10vh;
+  width: 30vw;
+  max-width: 100%;
+  height: auto;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 85vh;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5vh;
+    overflow: hidden;
+}
+
+#main-content h1 {
+    color: #fff;
+    margin: 0.7vw;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    margin: 0.3vw;
+    width: 16vw;
+}
+
+#main-content h2 {
+  color: #fff;
+  margin: 1vw;
+  text-align: center;
+
+}
+
+.form-group label {
+    color: #fff;
+    margin-right: 0.4vw;
+}
+
+.form-group input {
+    height: 1vw;
+}
+
+.form-group input[type="date"] {
+    width: 6.8vw;
+}
+
+.form-group input[type="submit"], .form-group input[type="reset"] {
+    width: 6.5vw;
+    margin: 1vw;
+    cursor: pointer;
+}
+
+.form-group input[type="checkbox"] {
+    margin-top: 0.3vw;
+    width: 0.7vw;
+    height: 0.7vw;
+}
+
+.form-group select {
+    width: 6.8vw;
+    height: 1vw;
+}
+
+#terms-and-conditions {
+    width: 16.3vw;
+    height: 7vw;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    overflow: scroll;
+    margin-top: 1vw;
+}
+
+label[for="terms-and-conditions"] {
+    margin-top: 0.3vw;
+  }
+
+/* MEDIA QUERIES */
+
+/* Adaptación de ancho fijo de resoluciones de más de 1300px de ancho. */
+/* YA SE APLICA POR DEFECTO EN EL CSS (YA QUE ESTA DISEÑADO EN UNA PANTALLA CON UN ANCHO MAYOR A 1300PX), LO PONGO SOLO PARA QUE VEAS QUE LO HE TENIDO EN CUENTA. */
+
+@media only screen and (min-width: 1300px) {
+
+}
+
+/* Adaptación optimizada para verse en una tablet en posición horizontal. */
+
+@media only screen and (max-width: 1024px) {
+    #main-content {
+        width: 60vw;
+    }
+    #main-content h1 {
+        margin-top: -7vw;
+    }
+    #logo {
+        width: 5vw;
+    }
+    #sylvanas {
+        width: 35vw;
+        left: -5vw;
+        top: 10vh;
+    }
+    body {
+        font-size: 1.6vw;   
+    }
+    nav ul {
+        width: 50vw;
+        font-size: 1.4vw;
+    }
+
+    .form-group {
+        width: 40vw;
+    }
+
+    .form-group input {
+        height: 2vw;
+    }
+
+    .form-group select {
+        width: 17vw;
+        height: 2vw;
+    }
+
+    #terms-and-conditions {
+        width: 40vw;
+        height: 14vw;
+        font-size: 1.4vw;
+    }
+
+    .form-group input[type="date"] {
+        width: 17vw;
+    }
+
+    .form-group input[type="submit"], .form-group input[type="reset"] {
+        width: 17vw;
+    }
+
+    .form-group input[type="checkbox"] {
+        width: 2vw;
+        height: 2vw;
+        margin-left: 2vw;
+    }
+    
+    .form-group label[for="terms-and-conditions"] {
+        font-size: 1.4vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #main-content h1 {
+        margin-top: -5vw;
+    }
+    body {
+        font-size: 2.4vw;   
+    }
+    nav ul {
+        width: 50vw;
+        font-size: 1.7vw;
+    }
+
+    .form-group {
+        width: 50vw;
+    }
+
+    .form-group select {
+        width: 22.5vw;
+    }
+
+    #terms-and-conditions {
+        width: 50vw;
+        height: 14vw;
+        font-size: 1.4vw;
+    }
+
+    .form-group input[type="date"] {
+        width: 22.5vw;
+    }
+
+    .form-group input[type="submit"], .form-group input[type="reset"] {
+        width: 20vw;
+        height: 3vw;
+    }
+
+    .form-group input[type="checkbox"] {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+    .form-group label[for="terms-and-conditions"] {
+        font-size: 1.8vw;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    #main-content {
+        width: 60vw;
+    }
+    #main-content h1 {
+        margin-top: 0vw;
+    }
+    #logo {
+        width: 7vw;
+    }
+    #sylvanas {
+        display: none;
+    }
+    body {
+        font-size: 2.4vw;   
+    }
+    nav ul {
+        width: 80vw;
+        font-size: 2.1vw;
+    }
+
+    .form-group {
+        width: 60vw;
+        flex-direction: column;
+    }
+
+    .form-group input {
+        height: 3vw;
+    }
+
+    .form-group select {
+        width: 30.5vw;
+        height: 3vw;
+    }
+
+    #terms-and-conditions {
+        width: 55vw;
+        margin: auto;
+        margin-top: 2vw;
+        height: 14vw;
+        font-size: 2.2vw;
+    }
+
+    .form-group input[type="date"] {
+        width: 30.5vw;
+    }
+
+    .form-group input[type="submit"], .form-group input[type="reset"] {
+        width: 20vw;
+        height: 4vw;
+    }
+
+    .form-group input[type="checkbox"] {
+        width: 3vw;
+        height: 3vw;
+        margin: auto;
+        margin-top: 1vw;
+    }
+    
+    .form-group label[for="terms-and-conditions"] {
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #main-content {
+        width: 70vw;
+        height: 85vh;
+    }
+    #main-content h1 {
+        margin-top: 0vw;
+    }
+    #logo {
+        width: 10vw;
+    }
+    #sylvanas {
+        display: none;
+    }
+    body {
+        font-size: 4vw;
+    }
+    nav ul {
+        width: 80vw;
+        font-size: 2.3vw;
+    }
+
+    .form-group {
+        width: 60vw;
+        flex-direction: column;
+    }
+
+    .form-group input {
+        height: 6vw;
+        margin-left: 6vw;
+    }
+
+    .form-group select {
+        width: 54.5vw;
+        height: 6vw;
+        margin-left: 6vw;
+    }
+
+    #terms-and-conditions {
+        width: 65vw;
+        margin: auto;
+        margin-top: 2vw;
+        height: 14vw;
+        font-size: 3vw;
+    }
+
+    .form-group input[type="date"] {
+        width: 54.5vw;
+        height: 6vw;
+    }
+
+    .form-group input[type="submit"], .form-group input[type="reset"] {
+        width: 30vw;
+        height: 7vw;
+    }
+
+    .form-group input[type="checkbox"] {
+        width: 5vw;
+        height: 5vw;
+        margin: auto;
+        margin-top: 1vw;
+    }
+    
+    .form-group label[for="terms-and-conditions"] {
+        font-size: 4vw;
+    }
+}

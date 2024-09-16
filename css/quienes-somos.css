@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url('../fonts/RobotoMono-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'RobotoMono-Regular';
+}
+
+@keyframes breath {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  
+}
+
+.breath:hover {
+    animation-name: breath;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.6vw;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(76,71,112);
+    background: radial-gradient(circle, rgba(76,71,112,1) 0%, rgba(66,64,75,1) 52%, rgba(44,40,59,1) 83%);
+    border-radius: 10px;
+    color: #fff;
+    width: 80%;
+    height: 5vh;
+    margin: auto;
+    margin-top: 1vh;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35vw;
+    height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#logo {
+    width: 3vw;
+    height: 3vh;
+    margin-left: 1vw;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Esto es la parte del contenido*/
+
+/* Section Titulo */
+
+.section-titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    height: 85vh;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5vh;
+    overflow: hidden;
+}
+
+.section-titulo h1{
+    color: #fff;
+    margin: 0.7vw;
+    align-self: start;
+    margin-top: 8px;
+}
+
+.section-titulo p{
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.logo-blizzard{
+    width: 120px;
+    height: 120px;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.section-titulo h2 {
+    color: #fff;
+    margin: 1vw;
+    text-align: start;
+}
+
+.section-titulo br{
+    color: #fff;
+    margin: 0.7vw;
+    align-self: start;
+
+}
+
+.section-titulo ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35vw;
+    height: 100%;
+    color: #fff;
+}
+
+.section-titulo ul li{
+    list-style: none;
+}
+
+.section-titulo ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.starcraft2{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 35vw;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.starcraft2 h1{
+        font-size: 15px;
+}
+
+.logo-starcraft2{
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.overwatch2{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 35vw;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.overwatch2 h1{
+    font-size: 15px;
+}
+
+.logo-overwatch2{
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.diablo4{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 35vw;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.diablo4 h1{
+    font-size: 15px;
+}
+
+.logo-diablo4{
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.wow{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 35vw;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.wow h1{
+    font-size: 15px;
+}
+
+.logo-wow{
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1300px) {
+
+}
+
+/* Adaptación optimizada para verse en una tablet en posición horizontal. */
+
+@media only screen and (max-width: 1024px) {
+    .section-titulo{
+        width: 60vw;
+    }
+
+    .section-titulo h1 {
+        margin-top: -7vw;
+    }
+
+    #logo {
+        width: 5vw;
+    }
+
+    body {
+        font-size: 1.6vw;   
+    }
+    nav ul {
+        width: 50vw;
+        font-size: 1.4vw;
+    }
+}
+   
+@media only screen and (max-width: 768px) {
+
+    .section-titulo h1 {
+        margin-top: -5vw;
+    }
+
+    #logo {
+        width: 7vw;
+    }
+
+    body {
+        font-size: 2.4vw;   
+    }
+    nav ul {
+        width: 50vw;
+        font-size: 1.7vw;
+    }
+
+}
+
+@media only screen and (max-width: 568px) {
+    .section-titulo {
+        width: 60vw;
+    }
+    .section-titulo h1 {
+        margin-top: 0vw;
+    }
+
+    body {
+        font-size: 2.4vw;   
+    }
+    nav ul {
+        width: 80vw;
+        font-size: 2.1vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .section-titulo {
+        width: 70vw;
+        height: 85vh;
+    }
+    .section-titulo h1 {
+        margin-top: 0vw;
+    }
+
+    #logo {
+        width: 10vw;
+    }
+    body {
+        font-size: 4vw;
+    }
+    nav ul {
+        width: 80vw;
+        font-size: 2.3vw;
+    }
+
+}
